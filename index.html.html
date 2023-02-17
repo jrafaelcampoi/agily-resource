@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./favicon-agily.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style-main.css">
+    <title>Agily</title>
+</head>
+
+<body>
+    <h1 id="none-w" >Disponível apenas para computador ou tablet</h1>
+
+    <main id="main_screen" style="min-width: 1280px;">
+        <div class="menu-indicator">
+            <div class="menu-div" id="menu2" onclick="menu2()">1</div>
+            <div class="menu-div" id="menu3" onclick="menu3()">2</div>
+            <div class="menu-div" id="menu4" onclick="menu4()">3</div>
+            <div class="menu-div" id="menu5" onclick="menu5()">4</div>
+            <div class="menu-div" id="menu6" onclick="menu6()">5</div>
+        </div>
+
+        <section class="section" id="sec2">
+            <div class="div-ads" id="ads2">
+                <div class="ads-box"></div>
+            </div>
+            <div class="div-content">
+                <div class="div-up">
+                    <div class="div-title">
+                        <div class="img-title" style="background-image: url('./images/sec2.png');"></div>
+                        <h1 style="margin-left: -6vw;" class="title-page">Ideias para conteúdo</h1>
+                        <div class="more-btn"><button>Saiba Mais</button></div>
+                    </div>
+                    <div class="div-req">
+                        <div class="req-question"><h1>Insira um tema/assunto para receber 5 conteúdos para posts</h1></div>
+                        <div class="req-inputs">
+                            <input required type="text" id="input-ideia" class="req-input" placeholder="Ex.:  Escapamentos de carros, seguro de vida, empreendedorismo, " />
+                        </div>
+                    </div>
+                </div>
+                <div class="div-down" style="flex-direction: column; justify-content: flex-start;">
+                    <div style="display: flex; flex-direction: row; justify-content: space-between;" class="div-action">
+                        <div>
+                            <h1 class="div-result-text">Resultado:</h1>
+                            <textarea disabled style="width: 40vw;" class="result-textbox" id="result-textbox2"></textarea>
+                        </div>
+                        <button onclick="getIdeas()" id="btn2" style="margin-top: 13vh; margin-right: 90px;" class="gButton">Gerar</button>
+                    </div>
+                    <div class="div-warningmessage" id="wmessage">O gerador <b>NÃO</b> irá te entregar ideias que contenha:<br><br>• Recomendação de investimento;<br>• Referência á violência, pornografia ou imagens sensíveis;<br>• Palavras inadequadas e proibidas;</div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section" id="sec3">
+            <div class="div-ads" id="ads3">
+                <div class="ads-box"></div>
+            </div>
+            <div class="div-content">
+                <div class="div-up">
+                    <div class="div-title">
+                        <div class="img-title" style="background-image: url('./images/sec3.png');"></div>
+                        <h1 style="margin-left: -8vw;" class="title-page">Gerador de textos</h1>
+                        <div class="more-btn"><button>Saiba Mais</button></div>
+                    </div>
+                    <div class="div-req">
+                        <div class="req-question"><h1>Insira um tema/assunto para gerar um texto</h1></div>
+                        <div class="req-inputs">
+                            <input type="text" id="input-text" class="req-input" placeholder="Ex.:  A importância do seguro de carro, História do futebol no Brasil" />
+                        </div>
+                    </div>
+                </div>
+                <div style="display: flex; flex-direction: column; justify-content: flex-start;" class="div-down">
+                    <div class="box-content-up">
+                        <div class="buttons-actions" style="margin-top: 3vh;">
+                            <label style="overflow: hidden; color: #616161; font-size: 1.5vw; font-weight: 700;">Aspecto:</label><br>
+                            <select name="aspect-text" id="aspect-text" style="width: 15vw;">
+                                <option value="i1">Informativo</option>
+                                <option value="d2">Descritivo</option>
+                                <option value="p3">Persuasivo</option>
+                                <option value="j4">Jornalístico</option>
+                            </select><br>
+                            <button onclick="getText()" id="btn3" class="gButton">Gerar</button>
+                        </div>
+                        <div style="overflow: hidden;" class="result-box-text">
+                            <textarea disabled class="result-text3" id="result-textbox3"></textarea>
+                        </div>
+                    </div>
+                    <div class="box-message-down">
+                        <div style="padding: 5.5vh 4.5vw 0 0;" >O gerador <b>NÃO</b> irá te entregar textos que contenha:<br><br>• Recomendação de investimento;<br>• Referência á violência, pornografia ou imagens sensíveis;<br>• Palavras inadequadas e proibidas;</div>        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="sec4">
+            <div class="div-ads" id="ads4">
+                <div class="ads-box"></div>
+            </div>
+            <div class="div-content">
+                <div class="div-up">
+                    <div class="div-title">
+                        <div class="img-title" style="background-image: url('./images/sec4.png');"></div>
+                        <h1 style="margin-left: -6vw;" class="title-page">Gerador de hashtags</h1>
+                        <div class="more-btn"><button>Saiba Mais</button></div>
+                    </div>
+                    <div class="div-req">
+                        <div class="req-question"><h1>Insira um tema/assunto para 30 hashtags</h1></div>
+                        <div class="req-inputs">
+                            <input type="text" id="input-hashtag" class="req-input" placeholder="Ex.:  Futebol, arte antiga, investimentos, videogames, moda" />
+                        </div>
+                    </div>
+                </div>
+                <div class="div-down" style="flex-direction: column; justify-content: flex-start;">
+                    <div style="display: flex; flex-direction: row; justify-content: space-between;" class="div-action">
+                        <div>
+                            <h1 class="div-result-text">Resultado:</h1>
+                            <textarea disabled style="width: 40vw;" class="result-textbox" id="result-textbox4"></textarea>
+                        </div>
+                        <button onclick="getHashtags()" style="margin-top: 13vh; margin-right: 90px;" id="btn4" class="gButton">Gerar</button>
+                    </div>
+                    <div class="div-warningmessage" id="wmessage">O gerador <b>NÃO</b> irá te entregar hashtags que contenha:<br><br>• Recomendação de investimento;<br>• Referência á violência, pornografia ou imagens sensíveis;<br>• Palavras inadequadas e proibidas;</div>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="sec5">
+            <div class="div-ads" id="ads5">
+                <div class="ads-box"></div>
+            </div>
+            <div class="div-content">
+                <div class="div-up">
+                    <div class="div-title">
+                        <div class="img-title" style="background-image: url('./images/sec5.png');"></div>
+                        <h1 style="margin-left: -8vw;" class="title-page">Gerador de dados</h1>
+                        <div class="more-btn"><button>Saiba Mais</button></div>
+                    </div>
+                    <div class="div-req">
+                        <div class="req-question"><h1>Insira um tema/assunto para receber os dados</h1></div>
+                        <div class="req-inputs">
+                            <input type="text" id="input-data" class="req-input" placeholder="Ex.:  Numero de gols do Pelé, população da Santa Catarina" />
+                        </div>
+                    </div>
+                </div>
+                <div class="div-down" style="flex-direction: column; justify-content: flex-start;">
+                    <div style="display: flex; flex-direction: row; justify-content: space-between;" class="div-action">
+                        <div>
+                            <h1 class="div-result-text">Resultado:</h1>
+                            <textarea disabled style="width: 40vw;" class="result-textbox" id="result-textbox5"></textarea>
+                        </div>
+                        <button onclick="receptData()" id="btn5" style="margin-top: 13vh; margin-right: 90px;" class="gButton">Gerar</button>
+                    </div>
+                    <div class="div-warningmessage" id="wmessage">O gerador <b>NÃO</b> irá te entregar dados que contenha:<br><br>• Recomendação de investimento;<br>• Referência á violência, pornografia ou imagens sensíveis;<br>• Palavras inadequadas e proibidas;</div>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="sec6">
+            <div class="div-ads" id="ads6">
+                <div class="ads-box"></div>
+            </div>
+            <div class="div-content">
+                <div class="div-up">
+                    <div class="div-title">
+                        <div class="img-title" style="background-image: url('./images/sec6.png');"></div>
+                        <h1 style="margin-left: -10vw;" class="title-page">Criador de CTA</h1>
+                        <div class="more-btn"><button>Saiba Mais</button></div>
+                    </div>
+                    <div class="div-req">
+                        <div style="font-size: 0.8vw;" class="req-question"><h1>Insira apenas o nome do produto ou serviço para gerar uma chamada de ação</h1></div>
+                        <div class="req-inputs">
+                            <input type="text" id="input-cta" class="req-input" placeholder="Ex.: Escapamentos de carros, seguro de vida, empreendedorismo" />
+                        </div>
+                    </div>
+                </div>
+                <div class="div-down" style="flex-direction: column; justify-content: flex-start;">
+                    <div style="display: flex; flex-direction: row; justify-content: space-between;" class="div-action">
+                        <div>
+                            <h1 class="div-result-text">Resultado:</h1>
+                            <textarea disabled style="width: 40vw;" class="result-textbox" id="result-textbox6"></textarea>
+                        </div>
+                        <button onclick="getCTA()" id="btn6" style="margin-top: 13vh; margin-right: 90px;" class="gButton">Gerar</button>
+                    </div>
+                    <div class="div-warningmessage" id="wmessage">O gerador <b>NÃO</b> irá criar CTAs que contenha:<br><br>• Recomendação de investimento;<br>• Referência á violência, pornografia ou imagens sensíveis;<br>• Palavras inadequadas e proibidas;</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="./js/scroll-menu.js"></script>
+    <script src="./js/section2.js"></script>
+    <script src="./js/section3.js"></script>
+    <script src="./js/section4.js"></script>
+    <script src="./js/section5.js"></script>
+    <script src="./js/section6.js"></script>
+</body>
+
+</html> 
